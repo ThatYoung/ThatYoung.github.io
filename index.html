@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- load p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js></script>
+  <!-- load ml5.js -->
+  <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+  <!-- keep the video in center of browser -->
+  <style type="text/css">
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sitting Posture Monitoring Using PosNet</h1>
+  <p id="status">Loading Model...</p>
+  <p id="status1">Press the "START" button when you are ready. Then press "Space" key on keyboard to capture correct poses and "down-arrow" key for incorrect poses. <br/>
+  Make sure you capture with all possible head turns. <br/>
+  Once you collect enough samples for each class, press "t" to start the live training.<br/></p>
+  <div id="videoContainer"></div>
+  <!-- load the posenet.js file -->
+  <script src="posenet.js"></script>
+  <div class="card pink left_shadow ">
+  </div>
+  <p>Application won't count time if you are not in front of the screen.</p>
+  <p>Press "ALERT" button if you want to be alerted with a sound whenever you hunch.</p>
+</body>
+</html>
